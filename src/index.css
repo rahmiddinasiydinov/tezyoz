@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+
+.dark {
+  --primary: rgb(153, 41, 234);
+  --secondary: rgb(204, 102, 218);
+  --text: rgb(250, 235, 146);
+  --background: rgb(0, 0, 0)
+}
+
+
+.light {
+  --primary: rgb(153, 41, 234);
+  --secondary: rgb(204, 102, 218);
+  --text: rgb(250, 235, 146);
+  --background: rgb(0, 0, 0)
+}
+
+@theme inline{
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-text: var(--text);
+  --color-background: var(--background);
+  --font-display: ["Roboto Mono", monospace]
+}
