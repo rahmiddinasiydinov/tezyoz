@@ -10,7 +10,7 @@ import useEngine from '@/shared/hooks/useEngine';
 
 function Home() {
 
-  const {words, timeLeft} = useEngine()
+  const {state, words, timeLeft, typed} = useEngine()
   return (
     <>
       {/* <Navbar /> */}
@@ -18,10 +18,10 @@ function Home() {
         <CountdownTimer leftTime={timeLeft} />
         <WordsContainer>
           <GeneratedWords words={words} />
-          <UserTypings className='absolute inset-0' userInput={words} />
+          <UserTypings className='absolute inset-0' userInput={typed } words={words}/>
         </WordsContainer>
         <RestartButton
-          classNames='mx-auto mt-10 text-slate-500'
+          classNames='mx-auto mt-10 text-slate-500' 
           onStart={() => null}
         />
         <Results
